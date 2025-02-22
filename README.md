@@ -1,6 +1,6 @@
 # mici
 
-An Electron application with Vue and TypeScript
+An Electron application with Vue and TypeScript that helps you map MIDI controllers to various actions on your computer.
 
 ## Recommended IDE Setup
 
