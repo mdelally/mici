@@ -3,6 +3,8 @@ import { defineConfig, externalizeDepsPlugin } from 'electron-vite'
 import vue from '@vitejs/plugin-vue'
 // @ts-ignore dont ask questions
 import tailwindcss from '@tailwindcss/vite'
+import Components from 'unplugin-vue-components/vite'
+import RekaResolver from 'reka-ui/resolver'
 
 export default defineConfig({
   main: {
@@ -17,6 +19,6 @@ export default defineConfig({
         '@renderer': resolve('src/renderer/src')
       }
     },
-    plugins: [vue(), tailwindcss()]
+    plugins: [vue(), tailwindcss(), Components({ dts: true, resolvers: [RekaResolver()] })]
   }
 })
